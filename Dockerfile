@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) gd && \
     docker-php-ext-configure intl &&  \
-    docker-php-ext-install intl mysqli && \
+    docker-php-ext-install intl mysqli pdo pdo_mysql && \
     pecl install apcu zip imagick gd  && \
     docker-php-ext-enable apcu zip imagick  mysqli
 
